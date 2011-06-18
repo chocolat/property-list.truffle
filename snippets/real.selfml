@@ -1,0 +1,8 @@
+(name real)
+
+(trigger
+    (tab real))
+
+(only-in text.xml.plist)
+
+(snippet [<real>%{1}</real>])

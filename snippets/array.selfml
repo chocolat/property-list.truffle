@@ -1,0 +1,10 @@
+(name array)
+
+(trigger
+    (tab array))
+
+(only-in text.xml.plist)
+
+(snippet [<array>
+	%{0}
+</array>])

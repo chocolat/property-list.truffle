@@ -1,0 +1,21 @@
+(trigger
+    (key [[ctrl][shift]V]))
+
+(name [Validate Syntax])
+
+(only-in [source.plist, text.xml.plist])
+
+(input document)
+
+(output tooltip)
+
+(save nothing)
+
+(script [TEMP_FILE=`mktemp /tmp/TextMate_plist.XXXXXX`
+if [[ -n $TEMP_FILE ]]; then
+	cat > "$TEMP_FILE"
+	plutil -lint "$TEMP_FILE"|perl -pe "s|\\Q$TEMP_FILE\\E:\s*||"
+	rm "$TEMP_FILE"
+else
+	echo "Error: Temporary file could not be created"
+fi])

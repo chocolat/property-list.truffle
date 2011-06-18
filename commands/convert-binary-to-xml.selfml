@@ -1,0 +1,25 @@
+(trigger
+    (key [[ctrl][shift]H]))
+
+(name [Convert Binary to XML])
+
+(only-in source.plist.binary)
+
+(input document)
+
+(output replace-all)
+
+(save nothing)
+
+(script [if [[ -f "$TM_FILEPATH" ]]
+	then
+		first_line=$(head -n1 "$TM_FILEPATH")
+		if [[ ${first_line:0:6} == "bplist" ]]
+			then
+				plutil -convert xml1 -o /tmp/textmate_converted_plist.xml "$TM_FILEPATH"
+				cat /tmp/textmate_converted_plist.xml
+			else exit_show_tool_tip "File does not appear to be a binary property list."
+		fi
+	else exit_show_tool_tip "File must be saved before conversion."
+fi
+])

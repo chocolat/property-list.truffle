@@ -1,0 +1,10 @@
+(name dict)
+
+(trigger
+    (tab dict))
+
+(only-in text.xml.plist)
+
+(snippet [<dict>
+	%{0}
+</dict>])

@@ -1,0 +1,7 @@
+(menu command.convert-to-old-style-ascii
+    command.convert-binary-to-xml
+    ---
+    command.validate-plist
+    command.validate-preprocessed-plist
+    ---
+    (submenu [XML Property List Elements] snippet.plist snippet.dict snippet.array snippet.key --- snippet.string snippet.integer snippet.real snippet.date snippet.data snippet.true snippet.false))

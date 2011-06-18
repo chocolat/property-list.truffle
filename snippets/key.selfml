@@ -1,0 +1,8 @@
+(name key)
+
+(trigger
+    (tab key))
+
+(only-in text.xml.plist)
+
+(snippet [<key>%{1}</key>])

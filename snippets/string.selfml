@@ -1,0 +1,8 @@
+(name string)
+
+(trigger
+    (tab str))
+
+(only-in text.xml.plist)
+
+(snippet [<string>%{1}</string>])

@@ -1,0 +1,8 @@
+(name date)
+
+(trigger
+    (tab date))
+
+(only-in text.xml.plist)
+
+(snippet [<date>%{1="YYYY"}%{2/.+/-/}%{2="MM"}%{3/.+/-/}%{3="DD"}%{4/.+/T/}%{4="hh"}%{5/.+/:/}%{5="mm"}%{6/.+/:/}%{6="ss"}%{4/.+/Z/}</date>])

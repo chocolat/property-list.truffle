@@ -1,0 +1,8 @@
+(name integer)
+
+(trigger
+    (tab int))
+
+(only-in text.xml.plist)
+
+(snippet [<integer>%{1}</integer>])

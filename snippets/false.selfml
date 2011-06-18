@@ -1,0 +1,8 @@
+(name false)
+
+(trigger
+    (tab f))
+
+(only-in text.xml.plist)
+
+(snippet <false/>)

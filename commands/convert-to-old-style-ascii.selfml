@@ -1,0 +1,17 @@
+(trigger
+    (key [[ctrl][shift]H]))
+
+(name [Convert to Old-Style ASCII])
+
+(only-in [text.xml.plist, source.plist.binary])
+
+(input document)
+
+(output new-document)
+
+(save nothing)
+
+(script [if [[ -f "$TM_FILEPATH" ]] && [ $(grep -ao "^......" "$TM_FILEPATH"|head -n1) == "bplist" ]
+   then plutil -convert xml1 -o >(cat) "$TM_FILEPATH"|pl
+   else pl
+fi])

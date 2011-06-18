@@ -1,0 +1,10 @@
+(name data)
+
+(trigger
+    (tab data))
+
+(only-in text.xml.plist)
+
+(snippet [<data>
+	%{1}
+</data>])
